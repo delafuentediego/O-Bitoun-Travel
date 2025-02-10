@@ -1,0 +1,143 @@
+/* Réinitialisation de base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #1B3A4B;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(90deg, #1B3A4B, #70A288);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 5vw; /* Ajuste automatiquement la taille selon la largeur de l'écran */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet de s'adapter sur petits écrans */
+    margin: 0;
+    background-color: #1B3A4B;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #70A288;
+    border-radius: 5px;
+}
+
+/* Section Hero */
+.hero {
+    background: url('https://muralconcept.fr/cdn/shop/files/Papierpeintpanoramique-ForetdePins-Original-MC-741342.jpg?v=1711214768') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    width: 90%; /* Ajuste automatiquement la largeur */
+    max-width: 600px;
+}
+
+.overlay h2 {
+    font-size: 5vw; /* S'adapte à la largeur de l'écran */
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 3vw;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #70A288;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 4vw;
+}
+
+.btn:hover {
+    background-color: #1B3A4B;
+}
+
+/* Pied de page */
+footer {
+    background-color: #1B3A4B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 2.5vw;
+}
+
+/* Responsiveness avec media queries */
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 48px; /* Fixe une taille pour tablettes et plus grand */
+    }
+
+    .overlay h2 {
+        font-size: 36px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}

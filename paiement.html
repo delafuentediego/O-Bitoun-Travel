@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement - O’Bitoun Travel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    .form-section { padding: 40px; text-align: center; }
+    .form-container { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; display: inline-block; text-align: left; }
+    .form-container label { display: block; margin-top: 10px; font-weight: bold; }
+    .form-container input { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; text-decoration: none; background: #70A288; color: white; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="main-title">O’Bitoun Travel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="recherche.html">Rechercher un voyage</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="connexion.html">Connexion</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Paiement</h2>
+      <div class="form-container">
+        <form action="../php/scripts/traitement_paiement.php" method="POST">
+          <input type="hidden" name="voyage_id" value="1">
+          <label for="card_number">Numéro de carte (16 chiffres) :</label>
+          <input type="text" name="card_number" id="card_number" required maxlength="16" pattern="\d{16}">
+          <label for="card_owner">Nom et prénom du titulaire :</label>
+          <input type="text" name="card_owner" id="card_owner" required>
+          <label for="expiry_date">Date d'expiration (MM/AA) :</label>
+          <input type="text" name="expiry_date" id="expiry_date" placeholder="MM/AA" required pattern="\d{2}\/\d{2}">
+          <label for="cvv">Code de sécurité (CVV - 3 chiffres) :</label>
+          <input type="text" name="cvv" id="cvv" required maxlength="3" pattern="\d{3}">
+          <button type="submit" class="btn">Confirmer le paiement</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 O’Bitoun Travel - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

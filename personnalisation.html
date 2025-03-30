@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personnalisation du Voyage - O’Bitoun Travel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    .form-section { padding: 40px; text-align: center; }
+    .form-container { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; display: inline-block; text-align: left; }
+    .form-container label { display: block; margin-top: 10px; font-weight: bold; }
+    .form-container input, .form-container select { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; text-decoration: none; background: #70A288; color: white; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="main-title">O’Bitoun Travel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="recherche.html">Rechercher un voyage</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="connexion.html">Connexion</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Personnalisation du Voyage</h2>
+      <div class="form-container">
+        <form action="../php/scripts/traitement_personnalisation.php" method="POST">
+          <input type="hidden" name="voyage_id" value="1">
+          <label for="hebergement">Hébergement :</label>
+          <select name="hebergement" id="hebergement">
+            <option value="standard" selected>Hôtel Standard</option>
+            <option value="confort">Hôtel Confort</option>
+            <option value="luxe">Hôtel de Luxe</option>
+          </select>
+          <label for="nb_hebergement">Nombre de personnes pour l’hébergement :</label>
+          <input type="number" name="nb_hebergement" id="nb_hebergement" min="1" value="1">
+          <label for="transport">Transport :</label>
+          <select name="transport" id="transport">
+            <option value="bus" selected>Bus</option>
+            <option value="train">Train</option>
+            <option value="avion">Avion</option>
+            <option value="voiture">Voiture de location</option>
+          </select>
+          <label for="nb_transport">Nombre de personnes pour le transport :</label>
+          <input type="number" name="nb_transport" id="nb_transport" min="1" value="1">
+          <label for="prix_transport">Prix par personne pour le transport (en €):</label>
+          <input type="number" name="prix_transport" id="prix_transport" min="0" value="50">
+          <label for="restauration">Restauration :</label>
+          <select name="restauration" id="restauration">
+            <option value="aucune" selected>Sans repas</option>
+            <option value="demi">Demi-pension</option>
+            <option value="complete">Pension complète</option>
+          </select>
+          <label for="nb_restauration">Nombre de personnes pour la restauration :</label>
+          <input type="number" name="nb_restauration" id="nb_restauration" min="1" value="1">
+          <label for="vitesse_transport">Vitesse moyenne de déplacement (km/h) :</label>
+          <input type="number" name="vitesse_transport" id="vitesse_transport" min="0" value="80">
+          <button type="submit" class="btn">Valider la personnalisation</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 O’Bitoun Travel - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nom": "Admin",
+    "prenom": "One",
+    "email": "admin1@example.com",
+    "password": "$2y$10$eImiTXuWVxfM37uY4JANj.Qj3zEXaVW1PQBtKiLaX.cRk6XbnI6Oq",
+    "role": "admin",
+    "inscription_date": "2025-01-01 10:00:00"
+  },
+  {
+    "id": 2,
+    "nom": "Admin",
+    "prenom": "Two",
+    "email": "admin2@example.com",
+    "password": "$2y$10$eImiTXuWVxfM37uY4JANj.Qj3zEXaVW1PQBtKiLaX.cRk6XbnI6Oq",
+    "role": "admin",
+    "inscription_date": "2025-01-02 10:00:00"
+  },
+  {
+    "id": 3,
+    "nom": "User",
+    "prenom": "One",
+    "email": "user1@example.com",
+    "password": "$2y$10$eImiTXuWVxfM37uY4JANj.Qj3zEXaVW1PQBtKiLaX.cRk6XbnI6Oq",
+    "role": "user",
+    "inscription_date": "2025-02-01 11:00:00"
+  },
+  {
+    "id": 4,
+    "nom": "User",
+    "prenom": "Two",
+    "email": "user2@example.com",
+    "password": "$2y$10$eImiTXuWVxfM37uY4JANj.Qj3zEXaVW1PQBtKiLaX.cRk6XbnI6Oq",
+    "role": "user",
+    "inscription_date": "2025-02-02 11:00:00"
+  },
+  {
+    "id": 5,
+    "nom": "User",
+    "prenom": "Three",
+    "email": "user3@example.com",
+    "password": "$2y$10$eImiTXuWVxfM37uY4JANj.Qj3zEXaVW1PQBtKiLaX.cRk6XbnI6Oq",
+    "role": "user",
+    "inscription_date": "2025-02-03 11:00:00"
+  }
+]

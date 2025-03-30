@@ -1,55 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrateur - O’Bitoun Travel</title>
-    <link rel="stylesheet" href="CSS.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrateur - O’Bitoun Travel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    .admin-section {
+      padding: 40px;
+      text-align: center;
+    }
+    .admin-table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    .admin-table th, .admin-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    .btn-action {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-action.vip {
+      background-color: #70A288;
+      color: white;
+    }
+    .btn-action.ban {
+      background-color: #D9534F;
+      color: white;
+    }
+    .btn-deconnexion {
+      background-color: #D9534F;
+      color: white;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body class="admin">
-    <header>
-        <h1 class="main-title">O’Bitoun Travel - Administration</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="presentation.html">Présentation</a></li>
-                <li><a href="recherche.html">Rechercher un voyage</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
-                <li><a href="connexion.html">Connexion</a></li>
-                <li><a href="profil.html">Profil</a></li>
-                <li><a href="admin.html" class="active">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero" style="background: url('https://muralconcept.fr/cdn/shop/files/Papierpeintpanoramique-ForetdePins-Original-MC-741342.jpg?v=1711214768') no-repeat center center/cover;">
-            <div class="overlay">
-                <h2>Gestion des utilisateurs</h2>
-                <p>Gérez vos clients, modifiez leurs privilèges et gardez le contrôle.</p>
-            </div>
-        </section>
-        <section class="admin-section">
-            <h2>Liste des utilisateurs</h2>
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nom d'utilisateur</th>
-                        <th>Email</th>
-                        <th>Statut</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="user-table-body">
-                    <!-- Les données des utilisateurs seront ajoutées dynamiquement ici -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 O’Bitoun Travel - Tous droits réservés</p>
-    </footer>
-    <script src="js/admin.js"></script>
+  <header>
+    <h1 class="main-title">O’Bitoun Travel - Administration</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="recherche.html">Rechercher un voyage</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="connexion.html">Connexion</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" style="background: url('https://muralconcept.fr/cdn/shop/files/Papierpeintpanoramique-ForetdePins-Original-MC-741342.jpg?v=1711214768') no-repeat center center/cover;">
+      <div class="overlay">
+        <h2>Gestion des utilisateurs</h2>
+        <p>Gérez vos clients, modifiez leurs privilèges et gardez le contrôle.</p>
+      </div>
+    </section>
+    <section class="admin-section">
+      <h2>Liste des utilisateurs</h2>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom d'utilisateur</th>
+            <th>Email</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Exemples statiques. En production, ces données seront générées dynamiquement -->
+          <tr>
+            <td>1</td>
+            <td>AdminUser</td>
+            <td>admin@example.com</td>
+            <td>Admin</td>
+            <td>
+              <button class="btn-action ban">Bannir</button>
+              <button class="btn-action">Modifier</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>NormalUser</td>
+            <td>user@example.com</td>
+            <td>Normal</td>
+            <td>
+              <button class="btn-action vip">VIP</button>
+              <button class="btn-action ban">Bannir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <!-- Lien de déconnexion -->
+      <a href="../php/scripts/deconnexion.php" class="btn-deconnexion">Se déconnecter</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 O’Bitoun Travel - Tous droits réservés</p>
+  </footer>
 </body>
 </html>

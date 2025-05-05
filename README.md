@@ -1,30 +1,27 @@
 (clicker sur éditer pour le voir correctement)
 
 # O-Bitoun-Travel
-projet/
-├── index.html
-├── admin.html
-├── connexion.html
-├── profil.html
-├── presentation.html
-├── inscription.html
-├── personnalisation.html
-├── recherche.html
-├── paiement.html
+/    (racine projet)
+│
 ├── css/
-│   └── styles.css
-├── php/
-│   ├── includes/
-│   │   └── config.php
-│   └── scripts/
-│       ├── voyages.php
-│       ├── traitement_paiement.php
-│       ├── traitement_personnalisation.php
-│       ├── traitement_connexion.php
-│       ├── traitement_inscription.php
-│       └── deconnexion.php
-└── data/
-    ├── users.json
-    ├── voyages.json
-    └── transactions.json
+│   ├── style-light.css
+│   └── style-dark.css
+│
+├── js/
+│   ├── theme-toggle.js
+│   ├── form-validation.js
+│   ├── profile-inline-edit.js
+│   ├── admin-simulate.js
+│   ├── search-sort.js
+│   ├── dynamic-pricing.js
+│   └── cart.js
+│
+├── index.html
+├── inscription.html
+├── connexion.html
+├── presentation.html
+├── profil.html
+├── recherche.html
+└── admin.html
+
 		

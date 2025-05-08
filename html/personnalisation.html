@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O’Bitoun Travel - Personnalisation</title>
+  <link rel="stylesheet" id="theme-css" href="css/style-light.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1 class="main-title">Personnaliser votre voyage</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="recherche.html">Rechercher un voyage</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="connexion.html">Connexion</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-section">
+    <form action="php/scripts/traitement_personnalisation.php" method="POST">
+      <input type="hidden" name="voyage_id" value="123" />
+
+      <label for="hebergement">Hébergement :</label>
+      <select id="hebergement" name="hebergement" data-price>
+        <option value="standard" data-price="0">Standard</option>
+        <option value="confort" data-price="20">Confort (+20€)</option>
+        <option value="luxe" data-price="50">Luxe (+50€)</option>
+      </select>
+
+      <label for="transport">Transport :</label>
+      <select id="transport" name="transport" data-price="100">
+        <option value="bus" data-price="100">Bus (100€)</option>
+        <option value="train" data-price="150">Train (150€)</option>
+        <option value="avion" data-price="300">Avion (300€)</option>
+      </select>
+
+      <label for="restauration">Restauration :</label>
+      <select id="restauration" name="restauration" data-price>
+        <option value="aucune" data-price="0">Aucune</option>
+        <option value="demi" data-price="15">Demi-pension (+15€)</option>
+        <option value="complete" data-price="30">Pension complète (+30€)</option>
+      </select>
+
+      <div>
+        <strong>Total :</strong> <span id="total">0.00 €</span>
+      </div>
+
+      <button type="submit" class="btn">Valider et passer au paiement</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 O’Bitoun Travel - Tous droits réservés</p>
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/profile-inline-edit.js"></script>
+  <script src="js/admin-simulate.js"></script>
+  <script src="js/search-sort.js"></script>
+  <script src="js/dynamic-pricing.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
